@@ -5,7 +5,8 @@ import sqlite3
 janela=Tk()
 janela.title("Apoio de Idosos")
 janela.geometry('800x600')
-
+button = Button(janela,text='Sair',command = janela.destroy, bg='red', fg='black')                                                                                                                        
+button.place(x=770, y=0)
 texto_1 = Label (janela, text='Apoio para Idosos', bg="black",fg = 'white', font = ('arial bold', 20))
 texto_1.grid(row=0, column= 0, columnspan=3, pady=20, padx=10)
 
@@ -47,11 +48,12 @@ def game1():
     botao_conf = Button(janela, text='Confirmar', command = entry1, font=('arial bold', 14), width=15)
     botao_conf.place(x=15,y=360)
     radio1 = Radiobutton(janela, text="Fácil", fg="green", value = 0) 
-    radio1.place(x=15, y=400)
+    radio1.place(x=250, y=400)
     radio2 = Radiobutton(janela, text="Médio", fg="blue", value = 1)
-    radio2.place(x=15, y=420)
+    radio2.place(x=250, y=420)
     radio3 = Radiobutton(janela, text="Díficil", fg="red", value = 2)
-    radio3.place(x=15, y=440)
+    radio3.place(x=250, y=440)
+    
 
 botao_1 = Button(janela, text='Jogo 1', command = game1, font = ('arial bold', 14), width= 10) 
 botao_1.grid(row=10, column = 0, pady = 10, padx=15)
